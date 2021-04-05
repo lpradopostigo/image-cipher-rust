@@ -1,5 +1,5 @@
 [package]
-name = "image-cipher"
+name = "image_cipher"
 version = "0.1.0"
 authors = ["Luis Prado <lpradopostigo@gmail.com>"]
 edition = "2018"
