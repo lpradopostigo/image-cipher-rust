@@ -2,7 +2,7 @@
 name = "image_cipher"
 version = "0.2.0"
 authors = ["Luis Prado <lpradopostigo@gmail.com>"]
-edition = "2021"
+edition = "2018"
 [lib]
 crate-type = ["rlib"]
 
