@@ -4,9 +4,11 @@ use bytestream::ByteStream;
 use chaoticmap::ChaoticMap;
 use image::{io::Reader, DynamicImage, ImageFormat, RgbaImage};
 use std::io::Cursor;
-// use wasm_bindgen::prelude::*;
 
-// #[wasm_bindgen]
+#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
+use wasm_bindgen::prelude::*;
+
+#[cfg_attr(all(target_arch = "wasm32", target_os = "unknown"),wasm_bindgen)]
 pub fn cipher_image(input_data: &[u8], key: &str) -> Vec<u8> {
     let input_img = image_from_raw(input_data).into_rgba8();
     let (width, height) = input_img.dimensions();
